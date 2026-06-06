@@ -1,5 +1,4 @@
-import Countries from "./Components/Countries";
-
+import Countries from "./Components/Countries.jsx";
 
 const App = () => {
   return (
@@ -10,4 +9,3 @@ const App = () => {
 };
 
 export default App;
-
