@@ -91,6 +91,8 @@ const Countries = () => {
     
   ];
 
+  const filter = "somalia"
+
   return (
     <div className=" container mx-auto px-4 py-8 ">
       <h1 className="text-center font-bold text-3xl md:text-4xl text-gray-800 mb-8">
@@ -98,7 +100,7 @@ const Countries = () => {
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {countries.map((country, index) => (
-          <Country country={country} key={index} />
+          (country.name.includes(filter) || country.continent.includes(filter)) && (<Country country={country} key={index} />)
         ))}
       </div>
     </div>
